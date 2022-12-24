@@ -1,6 +1,6 @@
 <script>
-let word = "vimutti"
-let definition = "freedom, release, deliverance, emancipation, liberation"
+export let word
+export let definition
 </script>
 
 
