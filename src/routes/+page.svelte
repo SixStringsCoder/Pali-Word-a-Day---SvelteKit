@@ -1,11 +1,25 @@
 <script>
+	import { words } from './data.js'
+	// console.log(words)
   import WordCard from './WordCard.svelte'
-	export let data;
 
-	const wordsData = data.words
 	let wordIndex = 0;
-	let word = wordsData[wordIndex].word
-	let definition = wordsData[wordIndex].translations.eng.translation
+	$: wordObj = words[wordIndex]
+	$: word = wordObj.word
+	$: definition = wordObj.translations.eng.translation
+
+const goToNextWord = () => {
+	if (wordIndex === words.length-1) {
+		return wordIndex = 0;
+	}
+	return wordIndex += 1;
+}
+
+// 24 hours = 86400000 millisecs
+// setInterval(goToNextWord, 5000)
+
+
+
 </script>
 
 <svelte:head>
