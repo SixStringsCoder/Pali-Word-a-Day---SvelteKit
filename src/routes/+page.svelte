@@ -16,7 +16,7 @@ const goToNextWord = () => {
 }
 
 // 24 hours = 86400000 millisecs
-// setInterval(goToNextWord, 5000)
+setInterval(goToNextWord, 5000)
 
 
 
